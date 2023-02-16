@@ -1,0 +1,189 @@
+@font-face {
+    font-family: CaviarDreams;
+    src: url("fonts/CaviarDreams.ttf");
+}
+@font-face {
+    font-family: CaviarDreams_Bold;
+    src: url("fonts/CaviarDreams_Bold.ttf");
+}
+
+:root {
+    --primary_0: #1a1a1a;
+    --primary_1: #fff;
+    --secondary_0: #34cfc0;
+    --secondary_1: #333;
+    --secondary_2: #ccc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: CaviarDreams;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        position: fixed;
+        z-index: 1;
+        height: 12vh;
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
+        gap: 2%;
+        background-color: var(--primary_0);
+    }
+    header:hover nav{
+        display: flex;
+        visibility: visible;
+        opacity: 1;
+    }
+    header:hover #logo {
+        width: 7vw;
+        height: auto;
+        padding: 1em;
+        visibility: visible;
+        opacity: 1;
+    }
+    #logo {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        right: auto;
+        bottom: auto;
+        height: 100%;
+        width: fit-content;
+        padding: .4em;
+    }
+
+    #wlf {
+        height: 50%;
+        width: fit-content;
+    }
+    #W, #L, #F {
+        fill: var(--secondary_2);
+    }
+    #W {
+        animation: w 1s ease-out;
+    }
+    #L {
+        animation: l 1s ease-out;
+    }
+    #F {
+        animation: f 1s ease-out;
+    }
+    #dec {
+        height: 20%;
+        width: fit-content;
+    }
+    #designs path, #designs polygon, #e, #criacoes path, #criacoes polygon{
+        fill: var(--secondary_2);
+    }
+    #designs {
+        animation: d 2s ease-in-out;
+    }
+    #e {
+        animation: e 2s ease-in-out;
+    }
+    #criacoes {
+        animation: c 2s ease-in-out;
+    }
+    @keyframes w {
+        from {transform: translateY(100%);}
+        to {transform: translateY(0%);}
+    }
+    @keyframes l {
+        from {transform: scale(5);}
+    }
+    @keyframes f {
+        from {transform: translateY(-100%);}
+        to {transform: translateY(0%);}
+    }
+    @keyframes d {
+        from {opacity: 0; transform: translateX(50%);}
+        to {opacity: 1; transform: translateX(0%);}
+    }
+    @keyframes e {
+        from {opacity: 0;}
+        80% {opacity: 0;}
+        to {opacity: 1;}
+    }
+    @keyframes c {
+        from {opacity: 0; transform: translateX(-50%);}
+        to {opacity: 1; transform: translateX(0%);}
+    }
+
+    nav {
+        position: absolute;
+        left: 0;
+        top: 12vh;
+        right: auto;
+        bottom: 0;
+        height: 88vh;
+        width: 8vw;
+        padding: 1em;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--primary_0);
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s linear;
+    }
+    .nav-show {
+        display: flex;
+    }
+    nav ul {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        list-style: none;
+    }
+    nav a {
+        font-family: CaviarDreams_Bold;
+        font-size: 1em;
+        color: var(--secondary_2);
+        padding: 0 .4em;
+    }
+    nav a:hover {
+        font-size: .95em;
+        color: var(--secondary_0);
+    }
+    .nav-selecionado {
+        border-right: .2em solid var(--secondary_0);
+        border-left: .2em solid var(--secondary_0);
+    }
+    .nav-selecionado:hover {
+        opacity: .5;
+        transition: .4s all;
+    }
+    
+    .ghost {
+        height: 12vh;
+        width: 100%;
+        animation: test 3s infinite cubic-bezier(1, .2, 0.2, 1);
+    }
+
+    section {
+        height: 88vh;
+        width: 100%;
+    }
+
+    section:last-child {
+        background-color: yellow;
+    }
+
+    section:first-child {
+        background-color: aqua;
+    }
+}
