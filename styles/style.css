@@ -1155,6 +1155,9 @@ body:hover {
         background-color: var(--p0);
     }
 
+    .bg-img {
+        overflow: hidden;
+    }
     .bg-img #lobo0 {
         position: absolute;
         z-index: 0;
