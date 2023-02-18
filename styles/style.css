@@ -630,7 +630,7 @@ body:hover {
     }
 
     .ghost {
-        height: 14vh;
+        height: 12vh;
         width: 100%;
     }
 
@@ -698,6 +698,7 @@ body:hover {
         width: 100%;
         transition: 1s ease;
         background-color: var(--p0);
+        overflow: hidden;
     }
 
     .bg-img #lobo0 {
