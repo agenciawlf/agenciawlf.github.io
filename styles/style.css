@@ -302,11 +302,10 @@ body:hover {
     }
 
     #logo_0 {
-        width: 50%;
+        width: 70%;
     }
 
     #wlf_wolf {
-        
         display: flex;
         flex-flow: row nowrap;
     }
@@ -321,80 +320,19 @@ body:hover {
     .wlf_wolf:last-child {
         color: var(--s0);
     }
-
-    #works {
-        display: flex;
-        flex-flow: column nowrap;
-        height: 90vh;
-        padding-top: 2em;
-    }
-
-    #works .container {
-        position: relative;
-        padding: 1em;
+    
+    .slider {
         max-width: 90%;
-        margin: 2em auto;
+        position: relative;
+        margin: auto;
+        padding: 2.5em 0 0 0;
+        margin: 1px solid red;
     }
-
-    .gallery-wrapper {
-        overflow-x: auto;
-    }
-
-    .gallery-wrapper::-webkit-scrollbar {
+    .slide {
         display: none;
     }
-
-    .gallery {
-        display: flex;
-        flex-flow: row nowrap;
-        gap: .5em;
-    }
-
-    .arrow-left, .arrow-right {
-        color: #fff;
-        text-align: center;
-        width: 2em;
-        opacity: 0.1;
-    }
-
-    .arrow-left {
-        border: none;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: auto;
-        bottom: 0;
-        background: linear-gradient(to left, transparent 0%, black 200%);
-        transition: 1s all;}
-
-    .arrow-right {
-        border: none;
-        position: absolute;
-        top: 0;
-        left: auto;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(to right, transparent 0%, black 200%);
-    }
-
-    .arrow-left:hover {
-        opacity: 1;
-        transition: 1s all;
-    }
-
-    .arrow-right:hover {
-        opacity: 1;
-        transition: 1s all;
-    }
-
-    .item {
-        height: 26em;
-        opacity: .6;
-        transition: all 600ms ease-in-out;
-    }
-
-    .current-item {
-        opacity: 1;
+    .fade {
+        transition: .4s;
     }
 
     #equipe {
@@ -749,7 +687,7 @@ body:hover {
     }
 
     #logo_0 {
-        width: 30em;
+        width: 80%;
     }
 
     #wlf_wolf {
@@ -773,76 +711,29 @@ body:hover {
         flex-flow: column nowrap;
         padding-top: 2em;
     }
-
-    #works .container {
-        position: relative;
-        padding: 2em;
+    #works {
+        display: flex;
+        flex-flow: column nowrap;
+        padding-top: 2em;
+    }
+    .slider {
         max-width: 90%;
-        margin: 0 auto;
+        position: relative;
+        margin: auto;
+        padding: 2.5em 0 0 0;
+        margin: 1px solid red;
     }
-
-    .gallery-wrapper {
-        overflow-x: auto;
-    }
-
-    .gallery-wrapper::-webkit-scrollbar {
+    .slide {
         display: none;
     }
-
-    .gallery {
-        display: flex;
-        flex-flow: row nowrap;
-        gap: .5em;
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
     }
-
-    .arrow-left, .arrow-right {
-        color: #fff;
-        text-align: center;
-        width: 2em;
-        opacity: 0.1;
+    @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
     }
-
-    .arrow-left {
-        border: none;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: auto;
-        bottom: 0;
-        background: linear-gradient(to left, transparent 0%, black 200%);
-        transition: 1s all;}
-
-    .arrow-right {
-        border: none;
-        position: absolute;
-        top: 0;
-        left: auto;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(to right, transparent 0%, black 200%);
-    }
-
-    .arrow-left:hover {
-        opacity: 1;
-        transition: 1s all;
-    }
-
-    .arrow-right:hover {
-        opacity: 1;
-        transition: 1s all;
-    }
-
-    .item {
-        height: 25em;
-        flex-shrink: 0;
-        opacity: .6;
-        transition: all 600ms ease-in-out;
-    }
-
-    .current-item {
-        opacity: 1;
-    }
-
 
     #equipe {
         display: flex;
@@ -1206,7 +1097,7 @@ body:hover {
     }
 
     #logo_0 {
-        width: 30em;
+        width: 70%;
     }
 
     #wlf_wolf {
@@ -1230,19 +1121,27 @@ body:hover {
         flex-flow: column nowrap;
         padding-top: 2em;
     }
-
-    #works div {
-        width: 80%;
-        padding: 5em 0;
-        align-self: center;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
+    .slider {
+        max-width: 90%;
+        position: relative;
+        margin: auto;
+        padding: 2.5em 0 0 0;
+        margin: 1px solid red;
+    }
+    .slide {
+        display: none;
+    }
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+    @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
     }
 
     #works div img {
-        height: 20em;
-        padding: 1em;
+        height: 70vh;
     }
 
     #equipe {

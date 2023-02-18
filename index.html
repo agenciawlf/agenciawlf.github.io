@@ -85,26 +85,22 @@
                 </div>
                 <p><em>WLF</em> é a abreviação da palavra "<em>WOLF</em>" que em inglês significa "<em>LOBO</em>", animal que expressa determinação e ferocidade na busca de seus objetivos.</p>
                 <p>Astuto e leal, busca estar sempre em família e preservar sua essência.</p>
-                <img id="logo_0" src="../img/logo_0.png" width="192px">
+                <img id="logo_0" src="img/WLF-traços.gif" width="300px">
             </article>
         </section>
         <section id="works">
             <article>
                 <h1>alguns de nossos trabalhos</h1>
             </article>
-            <div class="container">
-                <button class="arrow-left control" aria-label="IMAGEM ANTERIOR">
-                    a
-                </button>
-                <button class="arrow-right control" aria-label="IMAGEM POSTERIOR">
-                    p
-                </button>
-                <div class="gallery-wrapper">
-                    <div class="gallery">
-                        <img class="item current-item" src="img/work_0.png">
-                        <img class="item" src="img/work_1.png">
-                        <img class="item" src="img/work_2.png">
-                    </div>
+            <div class="slider">
+                <div class="slide fade">
+                    <img src="./img/work_0.png" height="300px">
+                </div>
+                <div class="slide fade">
+                    <img src="./img/work_1.png" height="300px">
+                </div>
+                <div class="slide fade">
+                    <img src="./img/work_2.png" height="300px">
                 </div>
             </div>
         </section>
@@ -160,4 +156,22 @@
     <script src="scripts/slide.js"></script>
     <!--<script src="scripts/nav_bar.js"></script>-->
 </body>
+<script>
+    let sliderIndex = 0;
+    showSlider();
+
+    function showSlider() {
+        let i;
+        let slides = document.getElementsByClassName('slide');
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = 'none';
+        }
+        sliderIndex++;
+        if (sliderIndex > slides.length) {
+            sliderIndex = 1
+        }
+        slides[sliderIndex-1].style.display = 'block';
+        setTimeout(showSlider, 5000)
+    }
+</script>
 </html>
